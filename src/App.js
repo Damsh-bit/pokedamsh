@@ -17,7 +17,7 @@ function App() {
     title.style.left = 0;
     title.style.position = "sticky";
 
-    const response = await fetch(loadMore);
+    const response = await fetch(await loadMore);
     const data = await response.json();
 
     setLoadMore(data.next);
