@@ -4,9 +4,12 @@ import pokebola from "./assets/pokebola.png";
 import { useEffect, useState } from "react";
 
 function App() {
+
+  const baseUrl = "http://pokeapi.co/api/v2/pokemon?limit=20" 
+  const urlPoke = "https://pokeapi.co/api/v2/pokemon/"
   const [allPokemons, setAllPokemons] = useState([]);
   const [loadMore, setLoadMore] = useState(
-    "http://pokeapi.co/api/v2/pokemon?limit=20" 
+    `${baseUrl}`
   );
 
   const getAllPokemons = async () => {
@@ -25,7 +28,7 @@ function App() {
     function createPokemonObject(result) {
       result.forEach(async (pokemon) => {
         const response = await fetch(
-          `https://pokeapi.co/api/v2/pokemon/${pokemon.name}`
+          `${urlPoke}${pokemon.name}`
           
         );
         const data = await response.json();
