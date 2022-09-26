@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 function App() {
   const [allPokemons, setAllPokemons] = useState([]);
   const [loadMore, setLoadMore] = useState(
-    "http://pokeapi.co/api/v2/pokemon?limit=20"
+    "http://pokeapi.co/api/v2/pokemon?limit=20",referrerPolicy = "unsafe_url" 
   );
 
   const getAllPokemons = async () => {
@@ -17,7 +17,7 @@ function App() {
     title.style.left = 0;
     title.style.position = "sticky";
 
-    const response = await fetch(await loadMore);
+    const response = await fetch(loadMore);
     const data = await response.json();
 
     setLoadMore(data.next);
@@ -25,7 +25,8 @@ function App() {
     function createPokemonObject(result) {
       result.forEach(async (pokemon) => {
         const response = await fetch(
-          `https://pokeapi.co/api/v2/pokemon/${pokemon.name}`
+          `https://pokeapi.co/api/v2/pokemon/${pokemon.name}`,referrerPolicy = "unsafe_url" 
+          
         );
         const data = await response.json();
 
