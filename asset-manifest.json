@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/pokedamsh/static/css/main.ad80e284.css",
-    "main.js": "/pokedamsh/static/js/main.33540d92.js",
+    "main.js": "/pokedamsh/static/js/main.e370ebf0.js",
     "static/media/pokebola.png": "/pokedamsh/static/media/pokebola.8956d52191cc63d7ceaa.png",
     "index.html": "/pokedamsh/index.html",
     "main.ad80e284.css.map": "/pokedamsh/static/css/main.ad80e284.css.map",
-    "main.33540d92.js.map": "/pokedamsh/static/js/main.33540d92.js.map"
+    "main.e370ebf0.js.map": "/pokedamsh/static/js/main.e370ebf0.js.map"
   },
   "entrypoints": [
     "static/css/main.ad80e284.css",
-    "static/js/main.33540d92.js"
+    "static/js/main.e370ebf0.js"
   ]
 }
