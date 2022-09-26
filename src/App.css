@@ -1,34 +1,71 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app__container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100%;
+  margin: auto;
+  width: 100%;
+  text-align: center;
+  object-fit: cover;
+  overflow: hidden !important;
 }
 
-.App-link {
-  color: #61dafb;
+#pokebola {
+  width: 400px;
+  height: 400px;
+  animation: spin 18s infinite;
+  position: absolute;
+  opacity: 1;
+  transition: .4s;
 }
 
-@keyframes App-logo-spin {
+.app__container h1 {
+  margin: 0.5rem;
+  position: absolute;
+  top: 75%;
+  transition: 0.4s ease-in-out;
+}
+.pokemon__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+}
+.all__container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  height: 770px;
+  width: 100%;
+  max-height: 90%;
+  overflow: auto;
+  padding: 4rem;
+}
+
+.load__more {
+  position: relative;
+  margin: 1.5rem;
+  padding: 1.3em 3em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: rgba(77, 77, 77, 0.397);
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+}
+
+@keyframes spin {
   from {
     transform: rotate(0deg);
   }
@@ -36,3 +73,60 @@
     transform: rotate(360deg);
   }
 }
+
+button:hover {
+  background-color: #23c483;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+button:active {
+  transform: translateY(-1px);
+}
+
+@media screen and (max-width: 1700px) {
+  .app__container {
+    background-position: 47% -170%;
+  }
+}
+
+@media screen and (max-width: 1170px) {
+  .app__container {
+    background-position: 47% -45%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .app__container h1 {
+    margin: 1rem;
+    position: relative;
+    top: 0;
+  }
+  .app__container {
+    background-position: 47% -95%;
+  }
+}
+
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #ececec86 #ffffff;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #ecebeb;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+  }
