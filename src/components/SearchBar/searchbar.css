@@ -1,0 +1,47 @@
+.searchbar__container {
+  display: flex;
+  margin: 0px auto;
+}
+
+.searchbar {
+  background: none;
+  background-color: transparent;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchbar input {
+  padding: 7px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  margin-right: 2rem;
+  border: none;
+  width: 300px;
+  text-align: center;
+
+  /* From https://css.glass */
+background: rgba(255, 255, 255, 0.26);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.searchbar input:focus {
+  outline: none;
+}
+
+.searchbar__btn button:hover {
+  background-color: rgb(12, 65, 47);
+}
+
+.searchbar__btn button {
+  background-color: rgb(31, 138, 102);
+  border: none;
+  border-radius: 70%;
+  height: 100%;
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+}

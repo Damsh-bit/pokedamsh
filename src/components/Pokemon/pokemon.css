@@ -1,0 +1,92 @@
+.pokemon__card {
+  height: auto;
+  min-height: 250px;
+  min-width: 170px;
+  padding-bottom: 1rem;
+  background-color: white;
+  border-radius: 15px 15px;
+  margin: 1rem;
+
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.192);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.pokemon__card:hover {
+  cursor: pointer;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.514);
+}
+
+.pokemon__card img {
+  position: relative;
+  top: -40px;
+  width: 140px;
+  height: 140px;
+}
+
+.pokemon__card-background {
+  height: 100px;
+  width: 100%;
+  border-radius: 15px 15px 15px 15px;
+}
+
+.pokemon__card-background span {
+  position: relative;
+  bottom: -100px;
+  right: 5px;
+}
+
+.card__type {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.card__type span {
+  display: flex;
+}
+
+.card__type-type {
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border-radius: 40%;
+  color: white;
+}
+
+.rock {
+  background-color: rgb(194, 75, 75);
+}
+.ghost {
+  background-color: rgb(172, 171, 171);
+}
+.electric {
+  background-color: rgb(250, 250, 92);
+}
+.flying{
+  background-color: rgb(81, 104, 129);
+}
+.bug {
+  background-color: #fac26f;
+}
+.poison {
+  background-color: #c746fa;
+}
+.normal {
+  background-color: #7e7d7d;
+}
+.fairy {
+  background-color: rgba(250, 124, 145, 0.863);
+}
+.fire {
+  background-color: #fd3713;
+}
+.grass {
+  background-color: #80fc7c;
+}
+.water {
+  background-color: #5fbbfd;
+}
