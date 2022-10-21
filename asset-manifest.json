@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/pokedamsh/static/css/main.36903563.css",
-    "main.js": "/pokedamsh/static/js/main.8cc5c973.js",
+    "main.css": "/pokedamsh/static/css/main.550fa6f9.css",
+    "main.js": "/pokedamsh/static/js/main.033ed9b3.js",
     "static/media/bg.png": "/pokedamsh/static/media/bg.f29897f77624d8b419df.png",
     "static/media/pokebola.png": "/pokedamsh/static/media/pokebola.8956d52191cc63d7ceaa.png",
     "static/media/pokebola.gif": "/pokedamsh/static/media/pokebola.dc18ea15581723b9ac4f.gif",
     "index.html": "/pokedamsh/index.html",
-    "main.36903563.css.map": "/pokedamsh/static/css/main.36903563.css.map",
-    "main.8cc5c973.js.map": "/pokedamsh/static/js/main.8cc5c973.js.map"
+    "main.550fa6f9.css.map": "/pokedamsh/static/css/main.550fa6f9.css.map",
+    "main.033ed9b3.js.map": "/pokedamsh/static/js/main.033ed9b3.js.map"
   },
   "entrypoints": [
-    "static/css/main.36903563.css",
-    "static/js/main.8cc5c973.js"
+    "static/css/main.550fa6f9.css",
+    "static/js/main.033ed9b3.js"
   ]
 }
