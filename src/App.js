@@ -3,11 +3,14 @@ import "./App.css";
 import Home from "./components/Home/Home";
 import Pokedex from "./components/Pokedex/Pokedex";
 
+
 function App() {
-  
+
+ 
   return (
     <div>
       <Routes>
+        <Route path="/pokedamsh" element={<Home />} />
         <Route path="/" element={<Home />} />
         <Route path="/pokedex" element={<Pokedex />} />
       </Routes>
@@ -16,3 +19,4 @@ function App() {
 }
 
 export default App;
+

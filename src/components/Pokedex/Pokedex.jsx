@@ -28,7 +28,7 @@ const Pokedex = () => {
   const fetchPokemons = async () => {
     try {
       setLoading(true);
-      const data = await getPokemons(22, 22 * page);
+      const data = await getPokemons(20, 20 * page);
       const promises = data.results.map(async (pokemon) => {
         return await getPokemonData(pokemon.url);
       });
