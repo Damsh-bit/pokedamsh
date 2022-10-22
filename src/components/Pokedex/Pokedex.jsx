@@ -6,14 +6,18 @@ import { Link } from "react-router-dom";
 import "./Pokedex.css";
 import Pokemon from "../Pokemon/Pokemon";
 import pokebolaGIF from "../../assets/pokebola.gif";
+import PokemonCard from "../PokemonCard/PokemonCard.jsx";
 
 const Pokedex = () => {
   const [page, setPage] = useState(0);
   const [total, setTotal] = useState(0);
   const [loading, setLoading] = useState(true);
   const [pokemons, setPokemons] = useState([]);
+  const [pokemon, setPokemon] = useState([]);
   const [notFound, setNotFound] = useState(false);
   const [searching, setSearching] = useState(false);
+  const [Toggle, showMenu] = useState(false);
+  const [pokemonName, setPokemonName] = useState("");
 
   const lastPage = () => {
     const nextPage = Math.max(page - 1, 0);
@@ -64,6 +68,17 @@ const Pokedex = () => {
     setLoading(false);
     setSearching(false);
   };
+
+  const givePokemonInfo = async (namePokemon) => {
+    try {
+      setPokemonName(namePokemon);
+      showMenu(true);
+      let url = `https://pokeapi.co/api/v2/pokemon/${namePokemon}`;
+      const data = await getPokemonData(url);
+      console.log(data);
+      setPokemon(data);
+    } catch (err) {}
+  };
   return (
     <div className="container__pokedex">
       <Link to="/">
@@ -71,7 +86,7 @@ const Pokedex = () => {
       </Link>
       <div className="header">
         <div className="header__title">
-            <h1 id="title">Pokedex by Damsh</h1>         
+          <h1 id="title">Pokedex by Damsh</h1>
         </div>
         <div className="header__items">
           <SearchBar onSearch={onSearch} />
@@ -95,8 +110,31 @@ const Pokedex = () => {
             <div className="pokemon__container">
               <div className="all__container">
                 {pokemons.map((pokemon, idx) => {
-                  return <Pokemon pokemon={pokemon} key={pokemon.name} />;
+                  return (
+                    <button onClick={() => givePokemonInfo(pokemon.name)}>
+                      <Pokemon pokemon={pokemon} key={pokemon.name} />
+                    </button>
+                  );
                 })}
+              </div>
+
+              <div
+                className={
+                  Toggle
+                    ? "pokemon__selected show__pokemon-selected"
+                    : "pokemon__selected"
+                }
+              >
+                {pokemon.length == 0 ? (
+                  <div></div>
+                ) : (
+                  <div className="pokemon__details">
+                    <button onClick={() => showMenu(!Toggle)}>
+                      <i class="uil uil-multiply"></i>
+                    </button>
+                    <PokemonCard pokemon_selected={pokemon} key={pokemon.name} />
+                  </div>
+                )}
               </div>
             </div>
           )}

@@ -1,0 +1,20 @@
+.card__pokemon-data span {
+  margin-right: 15px;
+}
+
+.card__pokemon-data i {
+  margin-right: 5px;
+}
+
+.card__pokemon-abilities {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.card__pokemon-ability {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}

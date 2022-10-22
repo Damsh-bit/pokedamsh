@@ -96,6 +96,12 @@
 .flying {
   background-color: rgb(81, 104, 129);
 }
+.dark{
+  background-color: #4f0e75;
+}
+.ice{
+  background-color: #ddddddc7;
+}
 .bug {
   background-color: #a7b724;
 }

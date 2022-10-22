@@ -2,6 +2,7 @@ import React from "react";
 import "./pokemon.css";
 
 const Pokemon = (props) => {
+
   function capitalize(word) {
     return word[0].toUpperCase() + word.slice(1);
   }
@@ -71,7 +72,6 @@ const Pokemon = (props) => {
         </div>
       </div>
       </div>
-      
     </div>
   );
 };
