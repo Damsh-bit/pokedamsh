@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect, useState } from "react";
 import "./pokemoncard.css";
 
 const PokemonCard = (props) => {
@@ -83,11 +84,11 @@ const PokemonCard = (props) => {
 
         <div className="card__pokemon-abilities">
           <h4>Abilities</h4>
-          <div className="card__pokemon-ability" >
-            <span>
+          <div className="">
+            <span className="card__pokemon-ability">
               {pokemon_selected.abilities.map((ab, index) => {
                 return (
-                  <div className="card__pokemon-ability" key={index}>
+                  <div className="" key={index}>
                     <span>{ab.ability.name}</span>
                   </div>
                 );

@@ -75,10 +75,11 @@ const Pokedex = () => {
       showMenu(true);
       let url = `https://pokeapi.co/api/v2/pokemon/${namePokemon}`;
       const data = await getPokemonData(url);
-      console.log(data);
       setPokemon(data);
     } catch (err) {}
   };
+
+  
   return (
     <div className="container__pokedex">
       <Link to="/">

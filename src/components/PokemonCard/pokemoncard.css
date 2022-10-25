@@ -13,8 +13,10 @@
 }
 
 .card__pokemon-ability {
-  display: flex;
-  flex-direction: row;
+  display: grid ;
+  grid-template-columns: repeat(2,1fr);
   align-items: center;
   justify-content: center;
+  margin: auto;
+  gap: 5px;
 }
